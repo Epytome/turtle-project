@@ -48,6 +48,94 @@ clear()
 reset()
 
 
+def draw_random(t, x, y, line,oo,  fill):
+        penup()
+        goto(x, y)
+        pendown()
+        color(line,fill)
+        forward(oo)
+        left(90)
+        forward(oo)
+        left(90)
+        forward(oo)
+        left(90)
+        forward(oo)
+        left(90)
+
+def draw_random1(t, x, y, line,oo,  fill):
+        penup()
+        goto(x, y)
+        pendown()
+        color(line,fill)
+        back(oo)
+        right(90)
+        back(oo)
+        right(90)
+        back(oo)
+        right(90)
+        back(oo)
+        right(90)   
+        
+
+
+for i in range(1):
+    draw_random(jim ,0, 0, "red",10, "red")
+    draw_random(jim ,0, 0, "red",-10, "red")
+    draw_random1(jim ,0, 0, "red",10, "red")
+    draw_random1(jim ,0, 0, "red",-10, "red")
+    draw_random(joe ,0, 0, "orange", 20,  "red")
+    draw_random(joe ,0, 0, "orange", -20,  "red")
+    draw_random1(joe ,0, 0, "orange", 20,  "red")
+    draw_random1(joe ,0, 0, "orange", -20,  "red")
+    draw_random(hop ,0, 0, "green", 30, "red")
+    draw_random(hop ,0, 0, "green", -30, "red")
+    draw_random1(hop ,0, 0, "green", 30, "red")
+    draw_random1(hop ,0, 0, "green", -30, "red")
+    draw_random(bob ,0, 0, "blue", 40, "red")
+    draw_random(bob ,0, 0, "blue", -40, "red")
+    draw_random1(bob ,0, 0, "blue", 40, "red")
+    draw_random1(bob ,0, 0, "blue", -40, "red")
+    draw_random(jack ,0, 0, "indigo", 50, "red")
+    draw_random(jack ,0, 0, "indigo", -50, "red")
+    draw_random1(jack ,0, 0, "indigo", 50, "red")
+    draw_random1(jack ,0, 0, "indigo", -50, "red")
+    draw_random(jill ,0, 0, "violet", 60, "red")
+    draw_random(jill ,0, 0, "violet", -60, "red")
+    draw_random1(jill ,0, 0, "violet", 60, "red")
+    draw_random1(jill ,0, 0, "violet", -60, "red")
+    draw_random(jim ,0, 0, "red",70, "red")
+    draw_random(jim ,0, 0, "red",-70, "red")
+    draw_random1(jim ,0, 0, "red",70, "red")
+    draw_random1(jim ,0, 0, "red",-70, "red")
+    draw_random(joe ,0, 0, "orange", 80,  "red")
+    draw_random(joe ,0, 0, "orange", -80,  "red")
+    draw_random1(joe ,0, 0, "orange", 80,  "red")
+    draw_random1(joe ,0, 0, "orange", -80,  "red")
+    draw_random(hop ,0, 0, "green", 90, "red")
+    draw_random(hop ,0, 0, "green", -90, "red")
+    draw_random1(hop ,0, 0, "green", 90, "red")
+    draw_random1(hop ,0, 0, "green", -90, "red")
+    draw_random(bob ,0, 0, "blue", 100, "red")
+    draw_random(bob ,0, 0, "blue", -100, "red")
+    draw_random1(bob ,0, 0, "blue", 100, "red")
+    draw_random1(bob ,0, 0, "blue", -100, "red")
+    draw_random(jack ,0, 0, "indigo", 110, "red")
+    draw_random(jack ,0, 0, "indigo", -110, "red")
+    draw_random1(jack ,0, 0, "indigo", 110, "red")
+    draw_random1(jack ,0, 0, "indigo", -110, "red")
+    draw_random(jill ,0, 0, "violet", 120, "red")
+    draw_random(jill ,0, 0, "violet", -120, "red")
+    draw_random1(jill ,0, 0, "violet", 130, "red")
+    draw_random1(jill ,0, 0, "violet", -130, "red")
+        
+
+clear()
+reset()
+
+
+
+
+
 def forward():
     bop.forward(20)
 
@@ -109,8 +197,11 @@ def undo():
 def circle():
     if bop.circle(50):
         bop.speed(10)
-        
 
+
+def more_circles():
+    for i in range(10):
+        bop.circle(20)
 
 
 onkeypress(forward, "Up")
@@ -132,8 +223,8 @@ onkeypress(pen9, "9")
 onkeypress(pen10, "0")
 onkeypress(undo, "BackSpace")
 onkeypress(circle, "o")
+onkeypress(more_circles, "q")
 
-screen.onlcick(bop.goto)
 
 
 
